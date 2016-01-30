@@ -78,11 +78,18 @@
 \begin{frame}[<+->]
     \frametitle{Basisoperationen}
     \begin{itemize}
-        \item .
-        \item .
-        \item .
-        \item .
+        \item Verschieben -- \code{translate([x, y, z])}
+        \item Rotieren -- \code{rotate([xGrad, yGrad, zGrad])}
+        \item Skalieren -- \code{scale([xFaktor, yFaktor, zFaktor])}
+        \item Spiegeln --\code{mirror([x,y,z])}
     \end{itemize}
+\end{frame} 
+\begin{frame}[<+->]
+    \frametitle{Beispiel}
+    \code{translate([2,3,4])\newline%
+        \hspace*{1em}rotate([45,0,0])\newline%
+        \hspace*{2em}scale([0.5,1,2])\newline%
+        \hspace*{3em}cube([1,1,1]);}
 \end{frame} 
 
 \section{Fortgeschrittene Techniken}
