@@ -22,6 +22,8 @@
 \end{alertblock} %
 \end{frame}}
  
+\newcommand{\code}[1]{\texttt{#1}}
+
 \title{3D Objekte mit OpenSCAD}
 \author{Thomas Helmke}
 \date{09.02.2016}
@@ -58,10 +60,17 @@
 \begin{frame}[<+->]
     \frametitle{Basiskörper}
     \begin{itemize}
-        \item .
-        \item .
-        \item .
-        \item .
+        \item Würfel -- \code{cube([xLänge, yLänge, zLänge]);}
+        \item Zylinder -- \code{cylinder(h = Höhe, r1 = RadiusUnten, r2 = RadiusOben);}
+        \item Kugel -- \code{sphere(r = Radius);}
+    \end{itemize}
+\end{frame} 
+\begin{frame}[<+->]
+    \frametitle{optionale Parameter}
+    \begin{itemize}
+        \item \code{center} -- zentriert den Körper im Koordinatenursprung
+        \item \code{\$fn} -- Anzahl der Flächen für runde Körper
+        \item \code{d} -- Durchmesser statt Radius
     \end{itemize}
 \end{frame} 
 \subsection{Basisoperationen}
