@@ -81,7 +81,7 @@
         \item Verschieben -- \code{translate([x, y, z])}
         \item Rotieren -- \code{rotate([xGrad, yGrad, zGrad])}
         \item Skalieren -- \code{scale([xFaktor, yFaktor, zFaktor])}
-        \item Spiegeln --\code{mirror([x,y,z])}
+        \item Spiegeln -- \code{mirror([x,y,z])}
     \end{itemize}
 \end{frame} 
 \begin{frame}[<+->]
@@ -94,20 +94,49 @@
 
 \section{Fortgeschrittene Techniken}
 \divider{\insertsection}
+\subsection{Variablen}
+\divider{\insertsubsection}
 \begin{frame}[<+->]
-    \frametitle{Arduino Version}
+    \frametitle{Variablen I}
     \begin{itemize}
-        \item .
-        \item .
-        \item .
-        \item .
+        \item Werte können in Variaben gespeichert werden
+        \item Variablen können mathematisch verrechnet werden
+    \end{itemize}
+    \uncover<+->{%
+    \code{xsize = 3.5;\newline%
+        ysize = xsize;\newline%
+        zsize = 0.5*xsize;}}
+\end{frame}
+\begin{frame}[<+->]
+    \frametitle{Variablen II}
+    \begin{itemize}
+        \item Variablen können an Funktionen übergeben werden
+    \end{itemize}
+    \uncover<+->{%
+    \code{translate(v=[xpos*(gap+xsize)+0.5*xsize,ypos*(gap+ysize)+0.5*ysize,0.5*zsize])\newline%
+        \hspace*{1em}cylinder(h=1.1*zsize, r=0.4*xsize, \$fn=20, center=true);}}
+\end{frame}
+\begin{frame}[<+->]
+    \frametitle{Module I}
+    \begin{itemize}
+        \item beliebige Funktionen zu Modulen zusammenfassen
+        \item Wiederverwendbarkeit von Code
+        \item Module können in externe Dateien ausgelagert werden
+    \end{itemize}
+\end{frame}
+\begin{frame}[<+->]
+    \frametitle{Module II}
+    \begin{itemize}
+        \item -
+        \item -
+        \item -
     \end{itemize}
 \end{frame}
 
 \section{Scripting}
 \divider{\insertsection}
 \begin{frame}[<+->]
-    \frametitle{Arduino Version}
+    \frametitle{Python}
     \begin{itemize}
         \item .
         \item .
@@ -121,10 +150,10 @@
 \begin{frame}
     \frametitle{Weitere Infos}
     \begin{itemize}
-        \item \url{https://github.com/Syralist/hshb-pres-ledpixels}
-        \item \url{https://wiki.hackerspace-bremen.de/projekte/videogame/start}
-        \item \url{https://github.com/HackerspaceBremen}
-        \item \url{https://gist.github.com/jh0ker/8a63a66d368d7b48c89d}
+        \item \url{https://github.com/Syralist/hshb-pres-openscad}
+        \item \url{http://www.openscad.org}
+        \item \url{http://www.openscad.net}
+        % \item \url{https://gist.github.com/jh0ker/8a63a66d368d7b48c89d}
     \end{itemize}
 \end{frame}
 \end{document}
