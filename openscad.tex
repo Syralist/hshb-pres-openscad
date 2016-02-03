@@ -76,7 +76,7 @@
 \subsection{Basisoperationen}
 \divider{\insertsubsection}
 \begin{frame}[<+->]
-    \frametitle{Basisoperationen}
+    \frametitle{Basisoperationen I}
     \begin{itemize}
         \item Verschieben -- \code{translate([x, y, z])}
         \item Rotieren -- \code{rotate([xGrad, yGrad, zGrad])}
@@ -91,6 +91,15 @@
         \hspace*{2em}scale([0.5,1,2])\newline%
         \hspace*{3em}cube([1,1,1]);}
 \end{frame} 
+\begin{frame}[<+->]
+    \frametitle{Basisoperationen II}
+    \begin{itemize}
+        \item Vereinen -- \code{union()\{\}}
+        \item Abziehen -- \code{difference()\{\}}
+        \item Überschneidung -- \code{intersection()\{\}}
+        % \item Spiegeln -- \code{mirror([x,y,z])}
+    \end{itemize}
+\end{frame} 
 
 \section{Fortgeschrittene Techniken}
 \divider{\insertsection}
@@ -99,7 +108,7 @@
 \begin{frame}[<+->]
     \frametitle{Variablen I}
     \begin{itemize}
-        \item Werte können in Variaben gespeichert werden
+        \item Werte können in Variabllen gespeichert werden
         \item Variablen können mathematisch verrechnet werden
     \end{itemize}
     \uncover<+->{%
@@ -116,6 +125,8 @@
     \code{translate(v=[xpos*(gap+xsize)+0.5*xsize,ypos*(gap+ysize)+0.5*ysize,0.5*zsize])\newline%
         \hspace*{1em}cylinder(h=1.1*zsize, r=0.4*xsize, \$fn=20, center=true);}}
 \end{frame}
+\subsection{Module}
+\divider{\insertsubsection}
 \begin{frame}[<+->]
     \frametitle{Module I}
     \begin{itemize}
@@ -153,7 +164,7 @@
         \item \url{https://github.com/Syralist/hshb-pres-openscad}
         \item \url{http://www.openscad.org}
         \item \url{http://www.openscad.net}
-        % \item \url{https://gist.github.com/jh0ker/8a63a66d368d7b48c89d}
+        \item \url{https://en.wikibooks.org/wiki/OpenSCAD_User_Manual}
     \end{itemize}
 \end{frame}
 \end{document}
