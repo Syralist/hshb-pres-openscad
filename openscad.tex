@@ -8,6 +8,7 @@
    adieresis={ä},
    germandbls={ß}
    }
+\usepackage{csquotes}
 
 \usetheme{PaloAlto}  %% Themenwahl
 
@@ -108,7 +109,7 @@
 \begin{frame}[<+->]
     \frametitle{Variablen I}
     \begin{itemize}
-        \item Werte können in Variabllen gespeichert werden
+        \item Werte können in Variablen gespeichert werden
         \item Variablen können mathematisch verrechnet werden
     \end{itemize}
     \uncover<+->{%
@@ -125,6 +126,17 @@
     \code{translate(v=[xpos*(gap+xsize)+0.5*xsize,ypos*(gap+ysize)+0.5*ysize,0.5*zsize])\newline%
         \hspace*{1em}cylinder(h=1.1*zsize, r=0.4*xsize, \$fn=20, center=true);}}
 \end{frame}
+\subsection{Iteration}
+\divider{\insertsubsection}
+\begin{frame}[<+->]
+    \frametitle{Iteration}
+    \begin{itemize}
+        \item For-Schleife, wie aus anderen Sprachen bekannt
+        \item Entweder Bereich vorgeben oder Vektor von Elementen
+        \item \code{for(variable = [start : increment : end])}
+        \item \code{for(variable = [vector])}
+    \end{itemize}
+\end{frame}
 \subsection{Module}
 \divider{\insertsubsection}
 \begin{frame}[<+->]
@@ -137,24 +149,22 @@
 \end{frame}
 \begin{frame}[<+->]
     \frametitle{Module II}
-    \begin{itemize}
-        \item -
-        \item -
-        \item -
-    \end{itemize}
+    Datei \enquote{mycube.scad}\newline
+    \code{module mycube(var1, var2)\newline%
+        \{\newline%
+        \hspace*{1em}cube([var1,var2,var1+var2]);\newline%
+        \}\newline%
+        mycube(1,2);}
+\end{frame}
+\begin{frame}[<+->]
+    \frametitle{Module III}
+    Datei \enquote{main.scad}\newline
+    \code{use <mycube.scad>;\newline%
+        mycube(2,3);\newline%
+        translate([1,2,3])\newline%
+        \hspace*{1em}mycube(1,2);}
 \end{frame}
 
-\section{Scripting}
-\divider{\insertsection}
-\begin{frame}[<+->]
-    \frametitle{Python}
-    \begin{itemize}
-        \item .
-        \item .
-        \item .
-        \item .
-    \end{itemize}
-\end{frame}
 
 \section{Weitere Infos}
 \divider{\insertsection}
