@@ -29,14 +29,17 @@ module lego(xsize=2, ysize=2, zsize=1)
     }
 }
 
+x=4;
+y=4;
+
 difference()
 {
-    lego(2,2,1/3);
+    lego(x,y,1/3);
     union()
     {
-        translate([(P-0.2)/2+0.5*P,(P-0.2)/2+0.5*P,0])
+        translate([0.5*x*P,0.5*y*P,0])
             cylinder(r1=dgewinde/2,r2=dkopf/2,h=hkopf);
-        translate([(P-0.2)/2+0.5*P,(P-0.2)/2+0.5*P,hkopf])
+        translate([0.5*x*P,0.5*y*P,,hkopf])
             cylinder(r=dkopf/2,h=hkopf);
     }
 }
